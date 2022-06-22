@@ -1,0 +1,967 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <!-- meta tags include -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="author" content="Pearson">
+  <link rel="icon" type="image/x-icon" href="//www.pearsoned.com/favicon.ico">
+  
+      <script>
+    dataLayer = [{
+      'uaTrackID': 'UA-76455200-17',
+      'originalLocation': document.location.protocol + '//' +
+                      document.location.hostname +
+                      document.location.pathname +
+                      document.location.search
+    }];
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KD8RWX3');</script>
+    <!-- End Google Tag Manager -->
+  
+  <script> var ie8 = false, ie9 = false; </script>
+  <!--[if lt IE 10]>
+      <script src="/bc/bc_0global/inc/html5shiv.min.js"></script>
+      <script> ie8  = true; ie9  = true; </script>
+  <![endif]-->
+  
+  <!-- /meta tags include -->  <title>Companion Website | Computer Networking: a Top-Down Approach, 7/e</title>
+  
+  <!-- css include -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css">
+	<link rel="stylesheet" href="/bc/bc_0global/site/inc/msa-master.css">
+  <!-- /css include -->    <script>
+var siteinfo = {
+  ms_path: '/aw/ecs_kurose_compnetwork_7',
+  site: 'cw',
+  site_type: 'Companion Website',
+  author_long: 'Kurose and Ross',
+  author_short: 'Kurose/Ross',
+  book_title: 'Computer Networking: a Top-Down Approach',
+  book_title_html: '<cite>Computer Networking: a Top-Down Approach</cite>',
+  book_ed_num: '7',
+  book_ed: '7/e',
+  book_nth: '7th Edition',
+  book_edition: '7th Edition',
+  _ed: ', 7/e',
+  _nth: ', 7th&nbsp;Edition',
+  title_ed: 'Computer Networking: a Top-Down Approach, 7/e',
+  title_nth: 'Computer Networking: a Top-Down Approach, 7th&nbsp;Edition',
+  author_title_ed: 'Kurose/Ross, Computer Networking: a Top-Down Approach, 7/e',
+  author_title_nth: 'Kurose/Ross, Computer Networking: a Top-Down Approach, 7th&nbsp;Edition',
+  title_ed_html: '<cite>Computer Networking: a Top-Down Approach</cite>, 7/e',
+  title_nth_html: '<cite>Computer Networking: a Top-Down Approach</cite>, 7th&nbsp;Edition',
+  author_title_ed_html: 'Kurose/Ross, <cite>Computer Networking: a Top-Down Approach</cite>, 7/e',
+  author_title_nth_html: 'Kurose/Ross, <cite>Computer Networking: a Top-Down Approach</cite>, 7th&nbsp;Edition',
+  crumbs_home_text: 'Home',
+  unit_label: 'Chapter',
+  subunit_label: 'Section',
+  mx_discipline: 'Computer Science',
+  cover_img: 'https://www-fp.pearsonhighered.com/assets/hip/images/bigcovers/0133594149.jpg',
+  cover_img_small: 'https://www-fp.pearsonhighered.com/assets/hip/images/coverimage/0133594149.jpg',
+  sitebanner: '/bc/bc_0global/site/inc_dev/php/wraps-pearson-banner.php',
+  styleroot: 'cw',
+  sitestyle: '/bc/bc_0global/inc/empty.php',
+  toc_path: '/aw/ecs_kurose_compnetwork_7/cw/inc/toc.json',
+  media_path: '/aw/ecs_kurose_compnetwork_7/cw/inc/media.json',
+  ms_siteroot: '/aw/ecs_kurose_compnetwork_7/cw/',
+  discipline: 'Computer Science',
+  book_isbn: '0133594149',
+  ua_track_id: 'UA-76455200-17',
+  irc_link: 'https://www.pearson.com/us/higher-education/program/Kurose-Computer-Networking-A-Top-Down-Approach-7th-Edition/PGM1101673.html',
+  ms_baseurl: 'https://media.pearsoncmg.com'
+}
+</script>
+  
+  <!-- js include -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="/bc/bc_0global/site/inc/utilities.js"></script>
+  <script src="/bc/bc_0global/site/inc/msa-master.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
+  <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.17.0/jquery.validate.min.js"></script>
+  <!-- /js include --></head>
+
+<body data-pagename="Student Resources">
+
+  
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KD8RWX3"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->      
+    <div data-role="popup" id="site-help" data-overlay-theme="b" role="alert">
+      <p class="screen-reader-text">pop-up content start</p>
+      <div data-role="header" role="banner" class="ui-header ui-bar-inherit" data-enhance="false">
+        <h2 id="info_hdr" aria-level="2" role="heading" class="ui-title" data-enhance="false">Site Help</h2>
+        <button data-enhance="false" data-inline="true" class="x-closer ui-btn-right">
+          <span class="screen-reader-text">close and return to site</span>
+          <span aria-hidden="true">&#10006;</span>
+        </button>
+      </div>
+      <div class="help-content">
+        <div>
+          <p>Problems with the site? Visit Pearson Support and contact our 24/7 customer support team.</p>
+          <p>
+            <a href="https://media.pearsoncmg.com/bc/bc_0global/support.html" data-ajax="false" class="open-new ui-btn btn-blue ui-corner-all">
+              <strong>Pearson Support</strong>
+            </a>
+          </p>
+        </div>
+        <div class="wd-columns book-info">
+          <img src="https://www-fp.pearsonhighered.com/assets/hip/images/coverimage/0133594149.jpg" aria-hidden="true" alt="">
+          <div class="col">
+            <p><strong>Computer Science Companion Website</strong></p>
+            <p><cite>Computer Networking: a Top-Down Approach</cite>, 7th&nbsp;Edition<br>Kurose and Ross</p>
+          </div>
+        </div>
+      </div>
+      <p class="screen-reader-text">pop-up content end</p>
+    </div>
+
+  <!-- //////////////////////////////////////////////////////////////////////////////////// -->
+  <!-- HOME/WELCOME/MENU PAGE -->
+
+  <div data-role="page" id="home-page">
+    
+<!-- banner include -->
+<header class="pearson banner">
+
+  <div class="banner-wrapper">
+    <div class="banner-logo"><span class="sr-only">Pearson</span></div>
+    <div class="banner-title">
+      <p class="banner-title-item book-title-ed">Computer Networking: a Top-Down Approach, 7th&nbsp;Edition</p>
+      <p class="banner-title-item book-title-author wd author-long wd-bullets"></p>
+    </div>
+  </div>
+
+  <div class="stripe">
+    <div class="stripe-wrapper">
+      <div class="stripe-left">
+        <a href="#" class="site-help-opener">
+          <i class="fa fa-info-circle fa-lg link-icon" aria-hidden="true"></i>
+          <span class="wd-hide-small-accessible">Help</span>
+        </a>
+      </div>
+      <span class="wd site-type"></span>
+    </div>
+  </div>
+</header>  
+<!-- /end banner -->
+    <main class="main-content">
+      <div class="wrapper">
+        <section class="media flex">
+          <h1>Student Resources</h1>
+          <img class="media-figure cw-cover" src="https://www-fp.pearsonhighered.com/assets/hip/images/bigcovers/0133594149.jpg" alt=" - Book Cover">
+          <div class="media-body">
+            <ul data-role="listview" data-inset="true">
+              <li><a href="content/self-assessment-mc/self-assessment-mc.php"><strong>Self-Assessment Multiple Choice Quiz</strong></a></li>
+              <li><a href="content/self-assessment-tf/self-assessment-tf.php"><strong>Self-Assessment True/False Quiz</strong></a></li>
+              
+<li>
+<a href='/aw/ecs_kurose_compnetwork_7/cw/content/powerpoints.zip' data-ajax='false' class='wd-download'>
+<strong>Powerpoint Slides</strong>
+<p class='ui-li-aside'>zip, 25.8 MB</p>
+<p>Download and view Powerpoint slides for each chapter.</p>
+</a>
+</li>
+
+<li>
+<a href='/aw/ecs_kurose_compnetwork_7/cw/content/python-socket-programming-assignments.zip' data-ajax='false' class='wd-download'>
+<strong>Python 3 Socket Programming Assignments</strong>
+<p class='ui-li-aside'>zip, 7 MB</p>
+<p>Download Python socket programming assignments.</p>
+</a>
+</li>
+              <li>
+                <a href="https://www-net.cs.umass.edu/wireshark-labs/" class="open-new">
+                  <strong>Wireshark Labs</strong>
+                </a>
+              </li>
+                            <li>
+                <a href="https://gaia.cs.umass.edu/kurose_ross/interactive/" class="open-new">
+                  <strong>Interactive Exercises</strong>
+                  <p>Interactive end-of-chapter exercises.</p>
+                </a>
+              </li>
+              <li>
+                <a href="#interactiveanimations">
+                  <strong>Interactive Animations</strong>
+                  <p>Animations illustrating fundamental concepts of computer networking.</p>
+                </a>
+              </li>
+              <li>
+                <a href="#videonotes">
+                  <strong>VideoNotes</strong>
+                  <p>Video tutorials illustrating key concepts from the text.</p>
+                </a>
+              </li>
+              <li>
+                <a href="#misclabs">
+                  <strong>Miscellaneous Labs</strong>
+                  <p>Miscellaneous lab activities.</p>
+                </a>
+              </li>
+              <li>
+                <a href="/aw/ecs_kurose_compnetwork_7/cw/content/SeattlePingNAT.pdf" class="open-new">
+                  <strong>Seattle Labs</strong>
+                  <p>Distributed ping and NAT exploration.</p>
+                </a>
+              </li>
+              <li>
+                <a href="/aw/ecs_kurose_compnetwork_7/cw/content/previous_edition_sample_chapter.pdf" class="open-new">
+                  <strong>Sample Chapter from Previous Edition</strong>
+                  <p>View and download a sample chapter from the previous edition.</p>
+                </a>
+              </li>
+              <li>
+                <a href="#materialsprevious">
+                  <strong>Retired Sections from Previous Editions</strong>
+                  <p>View and download retired materials from previous editions.</p>
+                </a>
+              </li>
+              <li>
+                <a href="#retiredjava">
+                  <strong>Retired Java Assignments</strong>
+                  <p>View retired Java assignments.</p>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        
+        <section>
+          <h1>Instructor Resource Center</h1>
+          <ul data-role="listview" data-inset="true">
+            <li>
+              <a href="https://www.pearson.com/us/higher-education/program/Kurose-Computer-Networking-A-Top-Down-Approach-7th-Edition/PGM1101673.html" class="open-new">
+                <strong>Instructor Resources</strong>
+                <p>Instructor materials are available on our Instructor Resource Center. Separate registration is required.</p>
+              </a>
+            </li>
+          </ul>
+        </section>
+
+      </div>
+    </main>
+    <!-- begin footer include -->
+<footer class="linkwell">
+  <h2 class="sr-only">Information Links</h2>
+  <div class="wrapper clearfix">
+    <div class="linkwell-column">
+      <h3 class="heading">Pearson Higher Education</h3>
+      <ul>
+        <li><a href="https://www.pearson.com/us/about.html">About Us</a></li>
+        <li><a href="https://www.pearson.com/us/higher-education/customers/educators.html">Educators</a></li>
+        <li><a href="https://www.pearson.com/us/higher-education/customers/administrators-deans.html">Academic Executives</a></li>
+        <li><a href="https://www.pearson.com/us/higher-education/customers/students.html">Students</a></li>
+        <li><a href="https://www.pearson.com/us/higher-education/customers.html">Other Customers</a></li>
+      </ul>
+    </div>
+
+    <div class="linkwell-column">
+      <h3 class="heading">Browse our Catalog</h3>
+      <ul>
+        <li><a href="https://www.pearson.com/us/higher-education.html">Pearson Higher Education</a></li>
+      </ul>
+      <h3 class="heading">Contact a Rep</h3>
+      <ul>
+        <li><a href="https://www.pearson.com/us/contact-us/find-your-rep.html">Find your Pearson rep</a></li>
+      </ul>
+    </div>
+
+    <div class="linkwell-column">
+      <h3 class="heading">Technical Help</h3>
+      <ul>
+        <li><a href="https://support.pearson.com/getsupport/">Pearson Technical Support</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="wrapper legal small">
+    Copyright &copy; <span class="wd current-year"></span> 
+    Pearson Education. All rights reserved.&nbsp;&nbsp;
+    <ul class="ul-inline">
+      <li><a href="https://www.pearson.com/us/terms-of-use.html">Terms of Use</a>&nbsp;|&nbsp;</li>
+      <li><a href="https://www.pearson.com/us/privacy-statement.html">Privacy Policy</a>&nbsp;|&nbsp;</li>
+      <li><a href="https://www.pearson.com/us/contact-us/permissions.html">Permissions</a>&nbsp;|&nbsp;</li>
+      <li><a href="https://www.pearson.com/corporate/contact-us/report-piracy.html">Report Piracy</a>&nbsp;|&nbsp;</li>
+      <li><a href="https://www.pearson.com/us/accessibility.html">Accessibility</a></li>
+    </ul>
+  </div>
+</footer>
+
+<div class="back-to-top animate-top">
+  <i class="fa fa-chevron-up" aria-hidden="true"></i>
+  <span class="sr-only"> Go to the top of this page</span>
+</div>
+
+<script>var sms = false;</script>
+<!-- /end footer include -->  </div>
+
+
+
+  <!-- //////////////////////////////////////////////////////////////////////////////////// -->
+  <!-- Home > media index pages -->
+
+  <div data-role="page" id="videonotes">
+    
+<!-- banner include -->
+<header class="pearson banner">
+
+  <div class="banner-wrapper">
+    <div class="banner-logo"><span class="sr-only">Pearson</span></div>
+    <div class="banner-title">
+      <p class="banner-title-item book-title-ed">Computer Networking: a Top-Down Approach, 7th&nbsp;Edition</p>
+      <p class="banner-title-item book-title-author wd author-long wd-bullets"></p>
+    </div>
+  </div>
+
+  <div class="stripe">
+    <div class="stripe-wrapper">
+      <div class="stripe-left">
+        <a href="#" class="site-help-opener">
+          <i class="fa fa-info-circle fa-lg link-icon" aria-hidden="true"></i>
+          <span class="wd-hide-small-accessible">Help</span>
+        </a>
+      </div>
+      <span class="wd site-type"></span>
+    </div>
+  </div>
+</header>  
+<!-- /end banner -->
+    <main class="main-content">
+      <div class="wrapper">
+        <header>
+          <nav class="crumbtrail" data-home-ajax="true"></nav>
+          <h1>VideoNotes</h1>
+        </header>
+        <p class="module-intro">Video tutorials illustrating key concepts from the text.</p>
+        <div class="module-content">
+          
+<section class="spaced">
+  <h2 class="list-header-c">Chapter 1</h2>
+  <ul data-role="listview" data-inset="true" class="stack">
+    <li>
+      <a href="https://mediaplayer.pearsoncmg.com/_ph_cc_ecs_set.title.Propagation_Delay_and_Transmission_Delay_(Chapter_01)__/aw/streaming/ecs_kurose_compnetw_6/PropAndTransmit.m4v" class="open-new">Propagation Delay and Transmission Delay</a>
+    </li>
+    <li>
+      <a href="https://mediaplayer.pearsoncmg.com/_ph_cc_ecs_set.title.Traceroute__/aw/streaming/ecs_kurose_compnetw_6/traceroute_videonote.m4v" class="open-new">Traceroute</a>
+    </li>
+  </ul>
+</section>
+
+<section class="spaced">
+  <h2 class="list-header-c">Chapter 2</h2>
+  <ul data-role="listview" data-inset="true" class="stack">
+    <li>
+      <a href="https://mediaplayer.pearsoncmg.com/_ph_cc_ecs_set.title.Distributed_Hash_Tables_(DHTs)_(Chapter_2)__/aw/streaming/ecs_kurose_compnetw_6/DHT.m4v" class="open-new">Distributed Hash Tables (DHTs)</a>
+    </li>
+    <li>
+      <a href="https://mediaplayer.pearsoncmg.com/_ph_cc_ecs_set.title.Introduction_to_Wireshark_and_HTTP__/aw/streaming/ecs_kurose_compnetw_6/wireshark_videonotes.m4v" class="open-new">Introduction to Wireshark and HTTP</a>
+    </li>
+  </ul>
+</section>
+
+<section class="spaced">
+  <h2 class="list-header-c">Chapter 3</h2>
+  <ul data-role="listview" data-inset="true" class="stack">
+    <li>
+      <a href="https://mediaplayer.pearsoncmg.com/_ph_cc_ecs_set.title.TCP_Congestion_Control_(Chapter_3)__/aw/streaming/ecs_kurose_compnetw_6/TCP.m4v" class="open-new">TCP Congestion Control</a>
+    </li>
+  </ul>
+</section>
+
+<section class="spaced">
+  <h2 class="list-header-c">Chapter 4</h2>
+  <ul data-role="listview" data-inset="true" class="stack">
+    <li>
+      <a href="https://mediaplayer.pearsoncmg.com/_ph_cc_ecs_set.title.Gluing_the_Internet_Together:_BGP_(Chapter_4)__/aw/streaming/ecs_kurose_compnetw_6/BGP.m4v" class="open-new">Gluing the Internet Together: BGP</a>
+    </li>
+    <li>
+      <a href="https://mediaplayer.pearsoncmg.com/_ph_cc_ecs_set.title.In-class_example_of_execution_of_Dijkstra%26%2339%3Bs_Link_State_Algorithm__/aw/streaming/ecs_kurose_compnetw_6/routing_video_notes.m4v" class="open-new">In-class example of execution of Dijkstra's Link State Algorithm</a>
+    </li>
+  </ul>
+</section>        </div>
+      </div>
+    </main>
+    <!-- begin footer include -->
+<footer class="linkwell">
+  <h2 class="sr-only">Information Links</h2>
+  <div class="wrapper clearfix">
+    <div class="linkwell-column">
+      <h3 class="heading">Pearson Higher Education</h3>
+      <ul>
+        <li><a href="https://www.pearson.com/us/about.html">About Us</a></li>
+        <li><a href="https://www.pearson.com/us/higher-education/customers/educators.html">Educators</a></li>
+        <li><a href="https://www.pearson.com/us/higher-education/customers/administrators-deans.html">Academic Executives</a></li>
+        <li><a href="https://www.pearson.com/us/higher-education/customers/students.html">Students</a></li>
+        <li><a href="https://www.pearson.com/us/higher-education/customers.html">Other Customers</a></li>
+      </ul>
+    </div>
+
+    <div class="linkwell-column">
+      <h3 class="heading">Browse our Catalog</h3>
+      <ul>
+        <li><a href="https://www.pearson.com/us/higher-education.html">Pearson Higher Education</a></li>
+      </ul>
+      <h3 class="heading">Contact a Rep</h3>
+      <ul>
+        <li><a href="https://www.pearson.com/us/contact-us/find-your-rep.html">Find your Pearson rep</a></li>
+      </ul>
+    </div>
+
+    <div class="linkwell-column">
+      <h3 class="heading">Technical Help</h3>
+      <ul>
+        <li><a href="https://support.pearson.com/getsupport/">Pearson Technical Support</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="wrapper legal small">
+    Copyright &copy; <span class="wd current-year"></span> 
+    Pearson Education. All rights reserved.&nbsp;&nbsp;
+    <ul class="ul-inline">
+      <li><a href="https://www.pearson.com/us/terms-of-use.html">Terms of Use</a>&nbsp;|&nbsp;</li>
+      <li><a href="https://www.pearson.com/us/privacy-statement.html">Privacy Policy</a>&nbsp;|&nbsp;</li>
+      <li><a href="https://www.pearson.com/us/contact-us/permissions.html">Permissions</a>&nbsp;|&nbsp;</li>
+      <li><a href="https://www.pearson.com/corporate/contact-us/report-piracy.html">Report Piracy</a>&nbsp;|&nbsp;</li>
+      <li><a href="https://www.pearson.com/us/accessibility.html">Accessibility</a></li>
+    </ul>
+  </div>
+</footer>
+
+<div class="back-to-top animate-top">
+  <i class="fa fa-chevron-up" aria-hidden="true"></i>
+  <span class="sr-only"> Go to the top of this page</span>
+</div>
+
+<script>var sms = false;</script>
+<!-- /end footer include -->  </div>  
+
+  <div data-role="page" id="interactiveanimations">
+    
+<!-- banner include -->
+<header class="pearson banner">
+
+  <div class="banner-wrapper">
+    <div class="banner-logo"><span class="sr-only">Pearson</span></div>
+    <div class="banner-title">
+      <p class="banner-title-item book-title-ed">Computer Networking: a Top-Down Approach, 7th&nbsp;Edition</p>
+      <p class="banner-title-item book-title-author wd author-long wd-bullets"></p>
+    </div>
+  </div>
+
+  <div class="stripe">
+    <div class="stripe-wrapper">
+      <div class="stripe-left">
+        <a href="#" class="site-help-opener">
+          <i class="fa fa-info-circle fa-lg link-icon" aria-hidden="true"></i>
+          <span class="wd-hide-small-accessible">Help</span>
+        </a>
+      </div>
+      <span class="wd site-type"></span>
+    </div>
+  </div>
+</header>  
+<!-- /end banner -->
+    <main class="main-content">
+      <div class="wrapper">
+        <header>
+          <nav class="crumbtrail" data-home-ajax="true"></nav>
+          <h1>Interactive Animations</h1>
+        </header>
+        <p class="module-intro">Animations illustrating fundamental concepts of computer networking.</p>
+        <div class="module-content">
+
+          <section class="spaced">
+            <h2 class="list-header-c">Chapter 1</h2>
+            <ul data-role="listview" data-inset="true" class="stack">
+              <li><a href="/aw/ecs_kurose_compnetwork_7/cw/content/interactiveanimations/transmission-vs-propogation-delay/transmission-propagation-delay-ch1/index.html" class="open-new">Transmission versus Propagation Delay Applet</a></li>
+              <li><a href="/aw/ecs_kurose_compnetwork_7/cw/content/interactiveanimations/queuing-loss-applet/index.html" class="open-new">Queuing and Loss Applet</a></li>
+              <li><a href="/aw/ecs_kurose_compnetwork_7/cw/content/interactiveanimations/message-segmentation/index.html" class="open-new">Message Segmentation</a></li>
+            </ul>
+          </section>
+
+          <section class="spaced">
+            <h2 class="list-header-c">Chapter 2</h2>
+            <ul data-role="listview" data-inset="true" class="stack">
+              <li><a href="/aw/ecs_kurose_compnetwork_7/cw/content/interactiveanimations/http-delay-estimation/index.html" class="open-new">HTTP Delay Estimation</a></li>
+              <li><a href="/aw/ecs_kurose_compnetwork_7/cw/content/interactiveanimations/recursive-iterative-queries-in-dns/index.html" class="open-new">Recursive/Iterative Queries in DNS</a></li>
+            </ul>
+          </section>
+
+          <section class="spaced">
+            <h2 class="list-header-c">Chapter 3</h2>
+            <ul data-role="listview" data-inset="true" class="stack">
+              <li><a href="/aw/ecs_kurose_compnetwork_7/cw/content/interactiveanimations/go-back-n-protocol/index.html" class="open-new">Go-Back-N Protocol</a></li>
+              <li><a href="/aw/ecs_kurose_compnetwork_7/cw/content/interactiveanimations/selective-repeat-protocol/index.html" class="open-new">Selective Repeat Protocol</a></li>
+              <li><a href="/aw/ecs_kurose_compnetwork_7/cw/content/interactiveanimations/flow-control/index.html" class="open-new">Flow Control</a></li>
+              <li><a href="/aw/ecs_kurose_compnetwork_7/cw/content/interactiveanimations/tcp-congestion/index.html" class="open-new">TCP Congestion Control</a></li>
+            </ul>
+          </section>
+
+          <section class="spaced">
+            <h2 class="list-header-c">Chapter 6</h2>
+            <ul data-role="listview" data-inset="true" class="stack">
+              <li><a href="/aw/ecs_kurose_compnetwork_7/cw/content/interactiveanimations/csma-cd/index.html" class="open-new">CSMA/CD</a></li>
+            </ul>
+          </section>
+
+          <section class="spaced">
+            <h2 class="list-header-c">Chapter 7</h2>
+            <ul data-role="listview" data-inset="true" class="stack">
+              <li><a href="/aw/ecs_kurose_compnetwork_7/cw/content/interactiveanimations/csma-ca-without-hidden/index.html" class="open-new">802.11 CSMA/CA WITHOUT Hidden Terminals</a></li>
+              <li><a href="/aw/ecs_kurose_compnetwork_7/cw/content/interactiveanimations/csma-ca-with-hidden/index.html" class="open-new">802.11 CSMA/CA WITH Hidden Terminals</a></li>
+            </ul>
+          </section>
+
+        </div>
+      </div>
+    </main>
+    <!-- begin footer include -->
+<footer class="linkwell">
+  <h2 class="sr-only">Information Links</h2>
+  <div class="wrapper clearfix">
+    <div class="linkwell-column">
+      <h3 class="heading">Pearson Higher Education</h3>
+      <ul>
+        <li><a href="https://www.pearson.com/us/about.html">About Us</a></li>
+        <li><a href="https://www.pearson.com/us/higher-education/customers/educators.html">Educators</a></li>
+        <li><a href="https://www.pearson.com/us/higher-education/customers/administrators-deans.html">Academic Executives</a></li>
+        <li><a href="https://www.pearson.com/us/higher-education/customers/students.html">Students</a></li>
+        <li><a href="https://www.pearson.com/us/higher-education/customers.html">Other Customers</a></li>
+      </ul>
+    </div>
+
+    <div class="linkwell-column">
+      <h3 class="heading">Browse our Catalog</h3>
+      <ul>
+        <li><a href="https://www.pearson.com/us/higher-education.html">Pearson Higher Education</a></li>
+      </ul>
+      <h3 class="heading">Contact a Rep</h3>
+      <ul>
+        <li><a href="https://www.pearson.com/us/contact-us/find-your-rep.html">Find your Pearson rep</a></li>
+      </ul>
+    </div>
+
+    <div class="linkwell-column">
+      <h3 class="heading">Technical Help</h3>
+      <ul>
+        <li><a href="https://support.pearson.com/getsupport/">Pearson Technical Support</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="wrapper legal small">
+    Copyright &copy; <span class="wd current-year"></span> 
+    Pearson Education. All rights reserved.&nbsp;&nbsp;
+    <ul class="ul-inline">
+      <li><a href="https://www.pearson.com/us/terms-of-use.html">Terms of Use</a>&nbsp;|&nbsp;</li>
+      <li><a href="https://www.pearson.com/us/privacy-statement.html">Privacy Policy</a>&nbsp;|&nbsp;</li>
+      <li><a href="https://www.pearson.com/us/contact-us/permissions.html">Permissions</a>&nbsp;|&nbsp;</li>
+      <li><a href="https://www.pearson.com/corporate/contact-us/report-piracy.html">Report Piracy</a>&nbsp;|&nbsp;</li>
+      <li><a href="https://www.pearson.com/us/accessibility.html">Accessibility</a></li>
+    </ul>
+  </div>
+</footer>
+
+<div class="back-to-top animate-top">
+  <i class="fa fa-chevron-up" aria-hidden="true"></i>
+  <span class="sr-only"> Go to the top of this page</span>
+</div>
+
+<script>var sms = false;</script>
+<!-- /end footer include -->  </div>
+
+
+  <div data-role="page" id="misclabs">
+    
+<!-- banner include -->
+<header class="pearson banner">
+
+  <div class="banner-wrapper">
+    <div class="banner-logo"><span class="sr-only">Pearson</span></div>
+    <div class="banner-title">
+      <p class="banner-title-item book-title-ed">Computer Networking: a Top-Down Approach, 7th&nbsp;Edition</p>
+      <p class="banner-title-item book-title-author wd author-long wd-bullets"></p>
+    </div>
+  </div>
+
+  <div class="stripe">
+    <div class="stripe-wrapper">
+      <div class="stripe-left">
+        <a href="#" class="site-help-opener">
+          <i class="fa fa-info-circle fa-lg link-icon" aria-hidden="true"></i>
+          <span class="wd-hide-small-accessible">Help</span>
+        </a>
+      </div>
+      <span class="wd site-type"></span>
+    </div>
+  </div>
+</header>  
+<!-- /end banner -->
+    <main class="main-content">
+      <div class="wrapper">
+        <header>
+          <nav class="crumbtrail" data-home-ajax="true"></nav>
+          <h1>Miscellaneous Labs</h1>
+        </header>
+        <div class="module-content">
+          <ul data-role="listview" data-inset="true">
+            <li><a href="/aw/aw_kurose_network_3/labs/lab5/lab5.html" class="open-new">Implementing a Reliable Transport Protocol</a></li> 
+            <li><a href="/aw/aw_kurose_network_3/labs/lab6/lab6.html" class="open-new">Implementing a Distributed, Asynchronous Distance Vector Routing Algorithm</a></li>
+            <li><a href="/aw/ecs_kurose_compnetwork_6/programmingAssignments/IPSecKR.pdf" class="open-new">IPsec Lab (PDF)</a></li>
+          </ul>
+        </div>
+      </div>
+    </main>
+    <!-- begin footer include -->
+<footer class="linkwell">
+  <h2 class="sr-only">Information Links</h2>
+  <div class="wrapper clearfix">
+    <div class="linkwell-column">
+      <h3 class="heading">Pearson Higher Education</h3>
+      <ul>
+        <li><a href="https://www.pearson.com/us/about.html">About Us</a></li>
+        <li><a href="https://www.pearson.com/us/higher-education/customers/educators.html">Educators</a></li>
+        <li><a href="https://www.pearson.com/us/higher-education/customers/administrators-deans.html">Academic Executives</a></li>
+        <li><a href="https://www.pearson.com/us/higher-education/customers/students.html">Students</a></li>
+        <li><a href="https://www.pearson.com/us/higher-education/customers.html">Other Customers</a></li>
+      </ul>
+    </div>
+
+    <div class="linkwell-column">
+      <h3 class="heading">Browse our Catalog</h3>
+      <ul>
+        <li><a href="https://www.pearson.com/us/higher-education.html">Pearson Higher Education</a></li>
+      </ul>
+      <h3 class="heading">Contact a Rep</h3>
+      <ul>
+        <li><a href="https://www.pearson.com/us/contact-us/find-your-rep.html">Find your Pearson rep</a></li>
+      </ul>
+    </div>
+
+    <div class="linkwell-column">
+      <h3 class="heading">Technical Help</h3>
+      <ul>
+        <li><a href="https://support.pearson.com/getsupport/">Pearson Technical Support</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="wrapper legal small">
+    Copyright &copy; <span class="wd current-year"></span> 
+    Pearson Education. All rights reserved.&nbsp;&nbsp;
+    <ul class="ul-inline">
+      <li><a href="https://www.pearson.com/us/terms-of-use.html">Terms of Use</a>&nbsp;|&nbsp;</li>
+      <li><a href="https://www.pearson.com/us/privacy-statement.html">Privacy Policy</a>&nbsp;|&nbsp;</li>
+      <li><a href="https://www.pearson.com/us/contact-us/permissions.html">Permissions</a>&nbsp;|&nbsp;</li>
+      <li><a href="https://www.pearson.com/corporate/contact-us/report-piracy.html">Report Piracy</a>&nbsp;|&nbsp;</li>
+      <li><a href="https://www.pearson.com/us/accessibility.html">Accessibility</a></li>
+    </ul>
+  </div>
+</footer>
+
+<div class="back-to-top animate-top">
+  <i class="fa fa-chevron-up" aria-hidden="true"></i>
+  <span class="sr-only"> Go to the top of this page</span>
+</div>
+
+<script>var sms = false;</script>
+<!-- /end footer include -->  </div>
+
+  <div data-role="page" id="materialsprevious">
+    
+<!-- banner include -->
+<header class="pearson banner">
+
+  <div class="banner-wrapper">
+    <div class="banner-logo"><span class="sr-only">Pearson</span></div>
+    <div class="banner-title">
+      <p class="banner-title-item book-title-ed">Computer Networking: a Top-Down Approach, 7th&nbsp;Edition</p>
+      <p class="banner-title-item book-title-author wd author-long wd-bullets"></p>
+    </div>
+  </div>
+
+  <div class="stripe">
+    <div class="stripe-wrapper">
+      <div class="stripe-left">
+        <a href="#" class="site-help-opener">
+          <i class="fa fa-info-circle fa-lg link-icon" aria-hidden="true"></i>
+          <span class="wd-hide-small-accessible">Help</span>
+        </a>
+      </div>
+      <span class="wd site-type"></span>
+    </div>
+  </div>
+</header>  
+<!-- /end banner -->
+    <main class="main-content">
+      <div class="wrapper">
+        <header>
+          <nav class="crumbtrail" data-home-ajax="true"></nav>
+          <h1>Retired Sections from Previous Editions</h1>
+        </header>
+        <div class="module-content">
+          <p class="module-intro">To keep the textbook up-to-date and a manageable size, the authors have removed, or significantly abbreviated, some of the sections in earlier editions. You can access much of this earlier material by visiting the links below.</p>
+
+          <section class="spaced">
+            <h2 class="list-header-c">Chapter 2</h2>
+            <ul data-role="listview" data-inset="true" class="stack">
+              <li><a href="/aw/ecs_kurose_compnetwork_6/prevEd/2-7_2-8.pdf" class="open-new">Socket Programming with TCP; Socket Programming with UDP (PDF)</a></li> 
+              <li><a href="/aw/ecs_kurose_compnetwork_7/cw/content/medialib/previous3e/2_9.pdf" class="open-new">Building a Simple Web Server (PDF)</a></li> 
+              <li><a href="/aw/ecs_kurose_compnetwork_7/cw/content/medialib/previous3e/Section2.4.3_4e.pdf" class="open-new">Mail Message Formats and MIME (PDF)</a></li>
+              <li><a href="/aw/ecs_kurose_compnetwork_7/cw/content/medialib/previous3e/Section2.6.2_4e.pdf" class="open-new">Searching for Information in a P2P Community (PDF)</a></li>
+            </ul>
+          </section>
+
+          <section class="spaced">
+            <h2 class="list-header-c">Chapter 3</h2>
+            <ul data-role="listview" data-inset="true" class="stack">
+              <li><a href="/aw/ecs_kurose_compnetwork_7/cw/content/medialib/previous3e/HTTP_Delay_Modeling.pdf" class="open-new">HTTP Delay Modeling (PDF)</a></li> 
+            </ul>
+          </section>
+
+          <section class="spaced">
+            <h2 class="list-header-c">Chapter 4</h2>
+            <ul data-role="listview" data-inset="true" class="stack">
+              <li><a href="/aw/ecs_kurose_compnetwork_7/cw/content/materialsprevious/multicast.html" class="open-new">Multicast Routing</a></li>
+            </ul>
+          </section>
+
+          <section class="spaced">
+            <h2 class="list-header-c">Chapter 5</h2>
+            <ul data-role="listview" data-inset="true" class="stack">
+              <li><a href="/aw/ecs_kurose_compnetwork_6/prevEd/5-7.pdf" class="open-new">PPP: the Point-to-Point Protocol (5.7) (PDF)</a></li>
+              <li><a href="/aw/ecs_kurose_compnetwork_7/cw/content/materialsprevious/framerelay.html" class="open-new">Frame Relay</a></li>
+              <li><a href="/aw/ecs_kurose_compnetwork_7/cw/content/medialib/previous3e/5_7_2.pdf" class="open-new">PPP (PDF)</a></li>
+            </ul>
+          </section>
+
+          <section class="spaced">
+            <h2 class="list-header-c">Chapter 7</h2>
+            <ul data-role="listview" data-inset="true" class="stack">
+              <li><a href="/aw/ecs_kurose_compnetwork_6/prevEd/7-1.pdf" class="open-new">Multimedia Networking Applications (7.1) (PDF)</a></li>
+              <li><a href="/aw/ecs_kurose_compnetwork_6/prevEd/7-2.pdf" class="open-new">Streaming Stored Audio and Video (7.2) (PDF)</a></li>
+              <li><a href="/aw/ecs_kurose_compnetwork_6/prevEd/7-4-2.pdf" class="open-new">RTP Control Protocol (RTCP) (7.4.2) (PDF)</a></li>
+              <li><a href="/aw/ecs_kurose_compnetwork_6/prevEd/7-5-3.pdf" class="open-new">Diffserv (7.5.3) (PDF)</a></li>
+              <li><a href="/aw/ecs_kurose_compnetwork_6/prevEd/7-6.pdf" class="open-new">Providing Quality of Service Guarantees (7.6) (PDF)</a></li>
+              <li><a href="/aw/ecs_kurose_compnetwork_7/cw/content/materialsprevious/h223.html" class="open-new">H.323</a></li>
+              <li><a href="/aw/ecs_kurose_compnetwork_7/cw/content/materialsprevious/rsvp.html" class="open-new">RSVP</a></li>
+            </ul>
+          </section>
+
+          <section class="spaced">
+            <h2 class="list-header-c">Chapter 8</h2>
+            <ul data-role="listview" data-inset="true" class="stack">
+              <li><a href="/aw/ecs_kurose_compnetwork_7/cw/content/medialib/previous3e/Key_Distribution.pdf" class="open-new">The Key Distribution Center (PDF)</a></li>
+              <li><a href="/aw/ecs_kurose_compnetwork_7/cw/content/medialib/previous3e/PrinciplesinPractice.pdf" class="open-new">Kerberos (PDF)</a></li>
+              <li><a href="/aw/ecs_kurose_compnetwork_7/cw/content/materialsprevious/set.html" class="open-new">Internet Commerce Using SET</a></li>
+              <li><a href="/aw/ecs_kurose_compnetwork_7/cw/content/medialib/Section8.4-8.4.4.pdf" class="open-new">End-Point Authentication (PDF)</a></li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </main>
+    <!-- begin footer include -->
+<footer class="linkwell">
+  <h2 class="sr-only">Information Links</h2>
+  <div class="wrapper clearfix">
+    <div class="linkwell-column">
+      <h3 class="heading">Pearson Higher Education</h3>
+      <ul>
+        <li><a href="https://www.pearson.com/us/about.html">About Us</a></li>
+        <li><a href="https://www.pearson.com/us/higher-education/customers/educators.html">Educators</a></li>
+        <li><a href="https://www.pearson.com/us/higher-education/customers/administrators-deans.html">Academic Executives</a></li>
+        <li><a href="https://www.pearson.com/us/higher-education/customers/students.html">Students</a></li>
+        <li><a href="https://www.pearson.com/us/higher-education/customers.html">Other Customers</a></li>
+      </ul>
+    </div>
+
+    <div class="linkwell-column">
+      <h3 class="heading">Browse our Catalog</h3>
+      <ul>
+        <li><a href="https://www.pearson.com/us/higher-education.html">Pearson Higher Education</a></li>
+      </ul>
+      <h3 class="heading">Contact a Rep</h3>
+      <ul>
+        <li><a href="https://www.pearson.com/us/contact-us/find-your-rep.html">Find your Pearson rep</a></li>
+      </ul>
+    </div>
+
+    <div class="linkwell-column">
+      <h3 class="heading">Technical Help</h3>
+      <ul>
+        <li><a href="https://support.pearson.com/getsupport/">Pearson Technical Support</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="wrapper legal small">
+    Copyright &copy; <span class="wd current-year"></span> 
+    Pearson Education. All rights reserved.&nbsp;&nbsp;
+    <ul class="ul-inline">
+      <li><a href="https://www.pearson.com/us/terms-of-use.html">Terms of Use</a>&nbsp;|&nbsp;</li>
+      <li><a href="https://www.pearson.com/us/privacy-statement.html">Privacy Policy</a>&nbsp;|&nbsp;</li>
+      <li><a href="https://www.pearson.com/us/contact-us/permissions.html">Permissions</a>&nbsp;|&nbsp;</li>
+      <li><a href="https://www.pearson.com/corporate/contact-us/report-piracy.html">Report Piracy</a>&nbsp;|&nbsp;</li>
+      <li><a href="https://www.pearson.com/us/accessibility.html">Accessibility</a></li>
+    </ul>
+  </div>
+</footer>
+
+<div class="back-to-top animate-top">
+  <i class="fa fa-chevron-up" aria-hidden="true"></i>
+  <span class="sr-only"> Go to the top of this page</span>
+</div>
+
+<script>var sms = false;</script>
+<!-- /end footer include -->  </div>
+
+
+
+  <div data-role="page" id="retiredjava">
+    
+<!-- banner include -->
+<header class="pearson banner">
+
+  <div class="banner-wrapper">
+    <div class="banner-logo"><span class="sr-only">Pearson</span></div>
+    <div class="banner-title">
+      <p class="banner-title-item book-title-ed">Computer Networking: a Top-Down Approach, 7th&nbsp;Edition</p>
+      <p class="banner-title-item book-title-author wd author-long wd-bullets"></p>
+    </div>
+  </div>
+
+  <div class="stripe">
+    <div class="stripe-wrapper">
+      <div class="stripe-left">
+        <a href="#" class="site-help-opener">
+          <i class="fa fa-info-circle fa-lg link-icon" aria-hidden="true"></i>
+          <span class="wd-hide-small-accessible">Help</span>
+        </a>
+      </div>
+      <span class="wd site-type"></span>
+    </div>
+  </div>
+</header>  
+<!-- /end banner -->
+    <main class="main-content">
+      <div class="wrapper">
+        <header>
+          <nav class="crumbtrail" data-home-ajax="true"></nav>
+          <h1>Retired Java Assignments</h1>
+        </header>
+        <div class="module-content">
+          <ul data-role="listview" data-inset="true">
+            <li>
+              <a href="/aw/aw_kurose_network_3/labs/lab1/lab1.html" class="open-new">Assignment 1: Building a Multi-Threaded Web Server in Java (Chapter 2)</a>
+            </li>
+
+            <li>
+              <a href="/aw/aw_kurose_network_3/labs/lab2/lab2.html" class="open-new">Assignment 2: A Mail User Agent in Java (Chapter 2)</a>
+            </li>
+
+            <li>
+              <a href="/aw/aw_kurose_network_3/labs/lab2a/lEmail_Lab.html" class="open-new">Assignment 2a: A Simplified Mail User Agent: Without GUI (Chapter 2)</a>
+            </li>
+
+            <li>
+              <a href="/aw/aw_kurose_network_3/labs/lab3/ping.html" class="open-new">Assignment 3: UDP Pinger (Chapter 2)</a>
+            </li>
+
+            <li>
+              <a href="/aw/aw_kurose_network_3/labs/lab4/lab4.html" class="open-new">Assignment 4: Proxy Cache (Chapter 2)</a>
+            </li>
+
+            <li>
+              <a href="/aw/aw_kurose_network_3/labs/lab7/lab7.html" class="open-new">Assignment 7: Streaming Video with RTSP and RTP (Chapter 7)</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+    <!-- begin footer include -->
+<footer class="linkwell">
+  <h2 class="sr-only">Information Links</h2>
+  <div class="wrapper clearfix">
+    <div class="linkwell-column">
+      <h3 class="heading">Pearson Higher Education</h3>
+      <ul>
+        <li><a href="https://www.pearson.com/us/about.html">About Us</a></li>
+        <li><a href="https://www.pearson.com/us/higher-education/customers/educators.html">Educators</a></li>
+        <li><a href="https://www.pearson.com/us/higher-education/customers/administrators-deans.html">Academic Executives</a></li>
+        <li><a href="https://www.pearson.com/us/higher-education/customers/students.html">Students</a></li>
+        <li><a href="https://www.pearson.com/us/higher-education/customers.html">Other Customers</a></li>
+      </ul>
+    </div>
+
+    <div class="linkwell-column">
+      <h3 class="heading">Browse our Catalog</h3>
+      <ul>
+        <li><a href="https://www.pearson.com/us/higher-education.html">Pearson Higher Education</a></li>
+      </ul>
+      <h3 class="heading">Contact a Rep</h3>
+      <ul>
+        <li><a href="https://www.pearson.com/us/contact-us/find-your-rep.html">Find your Pearson rep</a></li>
+      </ul>
+    </div>
+
+    <div class="linkwell-column">
+      <h3 class="heading">Technical Help</h3>
+      <ul>
+        <li><a href="https://support.pearson.com/getsupport/">Pearson Technical Support</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="wrapper legal small">
+    Copyright &copy; <span class="wd current-year"></span> 
+    Pearson Education. All rights reserved.&nbsp;&nbsp;
+    <ul class="ul-inline">
+      <li><a href="https://www.pearson.com/us/terms-of-use.html">Terms of Use</a>&nbsp;|&nbsp;</li>
+      <li><a href="https://www.pearson.com/us/privacy-statement.html">Privacy Policy</a>&nbsp;|&nbsp;</li>
+      <li><a href="https://www.pearson.com/us/contact-us/permissions.html">Permissions</a>&nbsp;|&nbsp;</li>
+      <li><a href="https://www.pearson.com/corporate/contact-us/report-piracy.html">Report Piracy</a>&nbsp;|&nbsp;</li>
+      <li><a href="https://www.pearson.com/us/accessibility.html">Accessibility</a></li>
+    </ul>
+  </div>
+</footer>
+
+<div class="back-to-top animate-top">
+  <i class="fa fa-chevron-up" aria-hidden="true"></i>
+  <span class="sr-only"> Go to the top of this page</span>
+</div>
+
+<script>var sms = false;</script>
+<!-- /end footer include -->  </div>
+
+</body>
+
+</html>        
+
+        
+
+
+
+
+
+               <script id="f5_cspm">(function(){var f5_cspm={f5_p:'EKIGOMCMOHGHNFENHHDELHOECAEELPKANHAOINBFDEFOMMLMGHNPIBJGHNGGEAIKIMLBJKLLAAPDBLJOLFMAPDHGAALIMDFHEJEMJAJJBBHNODIMKFNGNAGHPNPDNIBG',setCharAt:function(str,index,chr){if(index>str.length-1)return str;return str.substr(0,index)+chr+str.substr(index+1);},get_byte:function(str,i){var s=(i/16)|0;i=(i&15);s=s*32;return((str.charCodeAt(i+16+s)-65)<<4)|(str.charCodeAt(i+s)-65);},set_byte:function(str,i,b){var s=(i/16)|0;i=(i&15);s=s*32;str=f5_cspm.setCharAt(str,(i+16+s),String.fromCharCode((b>>4)+65));str=f5_cspm.setCharAt(str,(i+s),String.fromCharCode((b&15)+65));return str;},set_latency:function(str,latency){latency=latency&0xffff;str=f5_cspm.set_byte(str,40,(latency>>8));str=f5_cspm.set_byte(str,41,(latency&0xff));str=f5_cspm.set_byte(str,35,2);return str;},wait_perf_data:function(){try{var wp=window.performance.timing;if(wp.loadEventEnd>0){var res=wp.loadEventEnd-wp.navigationStart;if(res<60001){var cookie_val=f5_cspm.set_latency(f5_cspm.f5_p,res);window.document.cookie='f5avr0796202948aaaaaaaaaaaaaaaa_cspm_='+encodeURIComponent(cookie_val)+';path=/';}
+return;}}
+catch(err){return;}
+setTimeout(f5_cspm.wait_perf_data,100);return;},go:function(){var chunk=window.document.cookie.split(/\s*;\s*/);for(var i=0;i<chunk.length;++i){var pair=chunk[i].split(/\s*=\s*/);if(pair[0]=='f5_cspm'&&pair[1]=='1234')
+{var d=new Date();d.setTime(d.getTime()-1000);window.document.cookie='f5_cspm=;expires='+d.toUTCString()+';path=/;';setTimeout(f5_cspm.wait_perf_data,100);}}}}
+f5_cspm.go();}());</script>
